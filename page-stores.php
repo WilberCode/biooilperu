@@ -32,10 +32,17 @@ get_header();?>
               <?php 
                 if( have_rows('biooil_online')):  
                         while ( have_rows('biooil_online') ) : the_row();   	 
-                            ?> 
-                            <a href="<?php the_sub_field('biooil_online_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_online_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_online_nombre');?>']);"  >
+                            ?>  
+                            <?php 
+                            if( get_sub_field('biooil_online_activar') ) {    ?> 
+                                 <a href="<?php the_sub_field('biooil_online_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_online_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_online_nombre');?>']);"  >
+                                  <img src="<?php the_sub_field('biooil_online_logo');?>" alt="<?php the_sub_field('biooil_online_nombre');?>"> 
+                                </a> 
+                            <?php }else{ ?>
+                              <article>
                               <img src="<?php the_sub_field('biooil_online_logo');?>" alt="<?php the_sub_field('biooil_online_nombre');?>"> 
-                            </a> 
+                              </article>  
+                          <?php } ?> 
                     <?php   
                         endwhile; 
                 else : 
