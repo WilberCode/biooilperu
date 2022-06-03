@@ -4,8 +4,9 @@ Template Name: Tiendas
 Template Post Type: post, page, event
 */ 
 get_header();?>
+ 
 
-<div class="container">
+<div class="container ">
     <div class="max-w-[1076.5328px] mx-auto">
     
             <?php 
@@ -25,22 +26,24 @@ get_header();?>
       </div> 
 
       <main  class="max-w-[1200px] mx-auto  maxstore:px-2 " >
-        <h2 class=" text-base md:text-[21px] font-bold bg-primary-500 text-white bg-opacity-[55%] tracking-wider inline-flex pl-4 sm:pl-[68px] py-1 pr-8 maxsm:mt-[24px]  " ><?php the_field('biooil_online_titulo');?></h2>
-    
+      <?php if(get_field('biooil_tiendas_region_titulo')){?>
+        <h2 class=" text-base md:text-[21px] font-bold bg-primary-500  text-white bg-opacity-[55%] tracking-wider inline-flex  pl-4 sm:pl-[68px] py-1 pr-8 maxsm:mt-[24px]  " ><?php the_field('biooil_tiendas_region_titulo');?></h2> <br>
+      <?php }?>
+      <?php if(get_field('biooil_tiendas_region')){?>
           <section  class="mt-[42px] max-w-[1076.5328px] mx-auto" >
             <div class="grid grid-cols-3 md:grid-cols-4 gap-x-3 sm:gap-x-5 gap-y-3 sm:gap-y-4 mt-4  ">  
               <?php 
-                if( have_rows('biooil_online')):  
-                        while ( have_rows('biooil_online') ) : the_row();   	 
+                if( have_rows('biooil_tiendas_region')):  
+                        while ( have_rows('biooil_tiendas_region') ) : the_row();   	 
                             ?>  
                             <?php 
-                            if( get_sub_field('biooil_online_activar') ) {    ?> 
-                                 <a href="<?php the_sub_field('biooil_online_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_online_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_online_nombre');?>']);"  >
-                                  <img src="<?php the_sub_field('biooil_online_logo');?>" alt="<?php the_sub_field('biooil_online_nombre');?>"> 
+                            if( get_sub_field('biooil_tiendas_region_activar') ) {    ?> 
+                                 <a href="<?php the_sub_field('biooil_tiendas_region_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_tiendas_region_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_tiendas_region_nombre');?>']);"  >
+                                  <img src="<?php the_sub_field('biooil_tiendas_region_logo');?>" alt="<?php the_sub_field('biooil_tiendas_region_nombre');?>"> 
                                 </a> 
                             <?php }else{ ?>
                               <article>
-                              <img src="<?php the_sub_field('biooil_online_logo');?>" alt="<?php the_sub_field('biooil_online_nombre');?>"> 
+                              <img src="<?php the_sub_field('biooil_tiendas_region_logo');?>" alt="<?php the_sub_field('biooil_tiendas_region_nombre');?>"> 
                               </article>  
                           <?php } ?> 
                     <?php   
@@ -52,35 +55,73 @@ get_header();?>
                 ?>  
             </div>
           </section>
-          <h2 class=" text-base md:text-[21px] font-bold bg-primary-500 text-white bg-opacity-[55%] tracking-wider inline-flex pl-4 sm:pl-[68px] py-1 pr-8 mt-[40px]  " ><?php the_field('biooil_tiendas_titulo');?></h2>
-          
-          <section  class="mt-[20px] max-w-[1076.5328px] mx-auto pb-10 sm:pb-13" > 
-            <div class="grid grid-cols-3 md:grid-cols-4 gap-x-3 sm:gap-x-5 gap-y-3 sm:gap-y-4 mt-4  ">
-            <?php 
-              if( have_rows('biooil_tiendas')):  
-                  while ( have_rows('biooil_tiendas') ) : the_row();   
-                      ?> 
-                      
-                    <?php 
-                    if( get_sub_field('biooil_tiendas_activar') ) {    ?> 
-                      <a href="<?php the_sub_field('biooil_tiendas_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_tiendas_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_tiendas_nombre');?>']);"  >
-                        <img src="<?php the_sub_field('biooil_tiendas_logo');?>" alt="<?php the_sub_field('biooil_tiendas_nombre');?>"> 
-                      </a> 
-                    <?php }else{ ?>
-                      <article>
-                        <img src="<?php the_sub_field('biooil_tiendas_logo');?>" alt="<?php the_sub_field('biooil_tiendas_nombre');?>"> 
-                      </article>  
-                   <?php } ?> 
+          <?php }?>
 
-                      
-                  <?php   
-                      endwhile; 
-              else : 
-                      echo '<span >Aún no estan disponibles las tiendas</span>'; 
-              endif; 
-              ?> 
-            </div>
-          </section> 
+          <?php if(get_field('biooil_online_titulo')){?>
+            <h2 class=" text-base md:text-[21px] font-bold bg-primary-500 text-white bg-opacity-[55%] tracking-wider inline-flex pl-4 sm:pl-[68px] py-1 pr-8 mt-[40px]  " ><?php the_field('biooil_online_titulo');?></h2>
+          <?php }?>
+
+          <?php if(get_field('biooil_online')){?>
+            <section  class="mt-[20px] max-w-[1076.5328px] mx-auto pb-10 sm:pb-13" > 
+              <div class="grid grid-cols-3 md:grid-cols-4 gap-x-3 sm:gap-x-5 gap-y-3 sm:gap-y-4 mt-4  ">
+                <?php 
+                  if( have_rows('biooil_online')):  
+                          while ( have_rows('biooil_online') ) : the_row();   	 
+                              ?>  
+                              <?php 
+                              if( get_sub_field('biooil_online_activar') ) {    ?> 
+                                  <a href="<?php the_sub_field('biooil_online_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_online_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_online_nombre');?>']);"  >
+                                    <img src="<?php the_sub_field('biooil_online_logo');?>" alt="<?php the_sub_field('biooil_online_nombre');?>"> 
+                                  </a> 
+                              <?php }else{ ?>
+                                <article>
+                                <img src="<?php the_sub_field('biooil_online_logo');?>" alt="<?php the_sub_field('biooil_online_nombre');?>"> 
+                                </article>  
+                            <?php } ?> 
+                      <?php   
+                          endwhile; 
+                  else : 
+                          echo '<span >Aún no estan disponibles las tiendas</span>'; 
+                  endif;
+
+                  ?>  
+              </div>
+            </section>
+          <?php }?>
+
+          <?php if(get_field('biooil_tiendas_titulo')){?>
+            <h2 class=" text-base md:text-[21px] font-bold bg-primary-500 text-white bg-opacity-[55%] tracking-wider inline-flex pl-4 sm:pl-[68px] py-1 pr-8 mt-[40px]  " ><?php the_field('biooil_tiendas_titulo');?></h2>
+          <?php }?>
+
+          <?php if(get_field('biooil_tiendas')){?>
+            <section  class="mt-[20px] max-w-[1076.5328px] mx-auto pb-10 sm:pb-13" > 
+              <div class="grid grid-cols-3 md:grid-cols-4 gap-x-3 sm:gap-x-5 gap-y-3 sm:gap-y-4 mt-4  ">
+              <?php 
+                if( have_rows('biooil_tiendas')):  
+                    while ( have_rows('biooil_tiendas') ) : the_row();   
+                        ?> 
+                        
+                      <?php 
+                      if( get_sub_field('biooil_tiendas_activar') ) {    ?> 
+                        <a href="<?php the_sub_field('biooil_tiendas_link');?>" target="_blank" onclick="_gaq.push(['_trackEvent', '<?php the_sub_field('biooil_tiendas_nombre');?>', 'Enlace Saliente', '<?php the_sub_field('biooil_tiendas_nombre');?>']);"  >
+                          <img src="<?php the_sub_field('biooil_tiendas_logo');?>" alt="<?php the_sub_field('biooil_tiendas_nombre');?>"> 
+                        </a> 
+                      <?php }else{ ?>
+                        <article>
+                          <img src="<?php the_sub_field('biooil_tiendas_logo');?>" alt="<?php the_sub_field('biooil_tiendas_nombre');?>"> 
+                        </article>  
+                    <?php } ?> 
+
+                        
+                    <?php   
+                        endwhile; 
+                else : 
+                        echo '<span >Aún no estan disponibles las tiendas</span>'; 
+                endif; 
+                ?> 
+              </div>
+            </section> 
+          <?php }?>
           <section  class="  max-w-[1076.5328px] mx-auto" >
             <div class="relative" > 
               <img src="<?php the_field('biooil_banner');?>" alt="Bio Oil Aciete  y Crema ">
