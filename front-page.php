@@ -4,7 +4,7 @@ Template Name: Home
 Template Post Type: post, page, event
 */ 
 get_header();?> 
-    <h1 class="text-center text-transparent z-[-1] mt-4 overflow-hidden " ><?php echo get_bloginfo( 'description' ); ?></h1>
+    <h1 class="text-center text-transparent z-[-1] mt-4 overflow-hidden absolute " ><?php echo get_bloginfo( 'description' ); ?></h1>
 
     <div class="container flex justify-center items-center relative" > 
         <?php 
