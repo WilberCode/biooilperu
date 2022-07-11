@@ -3,23 +3,8 @@
 Template Name: Home
 Template Post Type: post, page, event
 */ 
-get_header();?>
-  
- 
-<!-- <div class="container xl:px-8"> -->
-   <?php
- /*   if(have_posts()):
-   while ( have_posts() ) :    
-         the_post(); 
-         the_content(); 
-   endwhile;
-   else:
-         printf('<p>Empty</p>');
-   endif;
-   rewind_posts();  */
-   ?>   
-<!-- </div>  -->
- 
+get_header();?> 
+    <h1 class="text-center text-transparent z-[-1] mt-4 overflow-hidden " ><?php echo get_bloginfo( 'description' ); ?></h1>
 
     <div class="container flex justify-center items-center relative" > 
         <?php 

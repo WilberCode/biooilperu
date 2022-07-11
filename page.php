@@ -33,7 +33,7 @@ $slug_name = $current_slug; */
 							while ($listing->have_posts()) : $listing->the_post();
 
 								$arr_image = thumbnail_image_url('homepage-thumbnail'); 
-									if ($arr_image!= '' ) :
+								if ($arr_image!= '' ) :
 										$url_image = $arr_image;
 								else :
 										$url_image = get_template_directory_uri()."/build/img/thumbnail-default.jpg";
