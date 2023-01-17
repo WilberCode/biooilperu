@@ -16,6 +16,14 @@ get_header();?>
         </div> 
    </div>
  </div>     
+
+
+ <div  class="mio" >
+    <div class="mio-1"> 1</div>
+    <div class="mio-2"> 2</div>
+    <div class="mio-3"> 3 </div>
+    <div class="mio-4"> 4</div> 
+</div>
  <?php 
 get_footer();
 ?>

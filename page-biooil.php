@@ -3,6 +3,8 @@
 Template Name: Bio-Oil
 Template Post Type: post, page, event
 */ 
+
+$path_image = get_bloginfo('template_directory').'/build/img/conocenos/';
 get_header();?> 
      <main  class="container text-paragraph" >
          <section  class=" mt-8  " > 
@@ -25,6 +27,28 @@ get_header();?>
                 </div>
             </div>  
         </section> 
+        <section class=" biooil-section" >  
+             <div  class=" biooil-section-body   ">
+                <div  class= " flex-1" >
+                    <h2>Loción Corporal</h2>
+                    <p >La fórmula única de Bio-Oil Body Lotion cuenta con una alta concentración de aceites capaces de brindar una hidratación profunda, dejando una sensación sedosa sobre la piel. Esto es posible gracias a la tecnología pionera de Bio-Oil, “agitar antes de usar”, la cual da como resultado una loción ultraligera y de rápida absorción.</p>
+                    <h3>Modo de Uso</h3>
+                    <p>Agita el producto antes de usarlo para activar las propiedades hidratantes. Coloca una cantidad moderada sobre la piel y masajea realizando movimientos circulares hasta que se absorba casi en un 100%. Úsala de preferencia luego del baño.</p>
+                    <h3>Presentaciones</h3>
+                    <p>175 ml</p>
+                    <h3>Ingredientes Principales </h3>
+                    <p> 
+                        <b>Ácido Hialurónico</b>: Tonifica, hidrata profundamente y crea un efecto lifting. <br> 
+                        <b>Vitamina E</b>: Ayuda a reducir los radicales libres y a prevenir el envejecimiento <br> prematuro de la piel. <br> 
+                        <b>Karité</b>: Forma una barrera que retiene la humedad y reduce la pérdida de agua que se va evaporando pasivamente en la piel.
+                    </p>
+                </div>
+                <div class=" flex-grow sm:max-w-[200px] md:max-w-[256.52px] space-y-[11.5596px] " >
+                    <img src="<?=$path_image.'locion1.jpg';?>" alt="Loción Corporal Bio Oil">
+                    <img src="<?=$path_image.'locion2.jpg';?>" alt="Loción Bio Oil - Modo de Uso">
+                </div>
+             </div> 
+        </section>
          <section class=" biooil-section" >  
              <div  class=" biooil-section-body   ">
                 <div  class= " flex-1" >
@@ -37,13 +61,13 @@ Está indicado para atenuar y mejorar la apariencia de: Estrías, Cicatrices y M
                     <p>25 - 60 - 125 - 200 ml</p>
                     <h3>Ingredientes</h3>
                     <p> 
-                        Vitamina A: ayuda a la cicatrización de heridas. <br>
-                        Vitamina E: incrementa la hidratación de la piel. <br>
-                        Romero: anti-inflamatorio, rico en antioxidantes. <br>
-                         Lavanda: relaja, tonifica y ayuda a la cicatrización. <br>
-                         Caléndula: mejora la textura, regenera los tejidos. <br>
-                        Camomila: tonifica, calma y restaura la piel inflamada.  <br>
-                        Purcellin Oil: contribuye a que la textura sea ligera y de rápida absorción. 
+                        <b>Vitamina A</b>: ayuda a la cicatrización de heridas. <br>
+                        <b>Vitamina E</b>: incrementa la hidratación de la piel. <br>
+                        <b>Romero</b>: anti-inflamatorio, rico en antioxidantes. <br>
+                        <b>Lavanda</b>: relaja, tonifica y ayuda a la cicatrización. <br>
+                         <b>Caléndula</b>: mejora la textura, regenera los tejidos. <br>
+                        <b>Camomila</b>: tonifica, calma y restaura la piel inflamada.  <br>
+                        <b>Purcellin Oil</b>: contribuye a que la textura sea ligera y de rápida absorción. 
                     </p>
                 </div>
                 <div class=" flex-grow sm:max-w-[200px] md:max-w-[256.52px] space-y-[11.5596px] " >

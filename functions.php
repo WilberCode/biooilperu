@@ -43,7 +43,7 @@ function thumbnail_image_url($size){
     $image_id = get_post_thumbnail_id($post -> ID);
     $main_image = wp_get_attachment_image_src($image_id, $size);
     //0 = ruta o url, 1 = width, 2 = height, 3 = boolean
-    return $main_image[0];
+    return empty($main_image[0])? false: $main_image[0] ;
 }   
  
 /* THUMBNAIL URL - END */
