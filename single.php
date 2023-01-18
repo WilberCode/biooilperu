@@ -4,7 +4,9 @@
 
 <div  class=" flex-1  md:flex w-full max-w-[1309px] justify-between md:space-x-7 mx-auto maxxl:px-4   mt-16 sm:mt-20 " >
   <main class="w-full   mb-10 max-w-[958.11px] mx-auto    " > 
-        <h1  class="lg:text-[49.31px] text-center leading-[1] text-primary-500 pb-4 sm:px-4" > <?php the_title();?>  </h1>
+        <!-- <h1  class="lg:text-[49.31px] text-center leading-[1] text-primary-500 pb-4 sm:px-4" >   the_title();  </h1> -->
+          <h1  class="lg:text-[49.31px] text-center leading-[1] text-primary-500 pb-4 sm:px-4 mx-auto maxl1:!w-full" style="width:<?php the_field('ancho_del_titulo'); ?>%" ><?php the_title();?></h1>
+        
           <div class="blog-post" > 
           <?php
             if ( have_posts() ) :
