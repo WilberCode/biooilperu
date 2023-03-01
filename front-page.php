@@ -37,18 +37,8 @@ get_header();?>
             </div>
       
   </div>
-  <div  class=" w-full flex justify-center md:max-w-[1200px] mx-auto  ">
-      <?php dynamic_sidebar('home-banner') ?>
-  </div>  
-       
- 
-  <div class=" container text-center flex justify-center pt-7 " >  
-    <div  class="w-full md:w-[429px] " >  
-      <?php  dynamic_sidebar('home-assessment') ?>   
-    </div>
-  </div>  
 
-  <section  class=" mt-5 sm:mt-[30px] bg-body" >
+  <section  class="   bg-body" >
     <div class="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0 sm:space-x-3 items-center container py-6 ">
         <div class="flex-1" > 
           <?php dynamic_sidebar('home-suscribe') ?>   
@@ -60,7 +50,18 @@ get_header();?>
         </div>
     </div>
 
-    </section> 
+  </section> 
+
+  <section  class=" w-full flex justify-center md:max-w-[1200px] mx-auto  mt-5 sm:mt-[30px] ">
+      <?php dynamic_sidebar('home-banner') ?>
+  </section>  
+       
+ 
+  <div class=" container text-center flex justify-center pt-7 " >  
+    <div  class="w-full md:w-[429px] " >  
+      <?php  dynamic_sidebar('home-assessment') ?>   
+    </div>
+  </div>   
     <main class="mt-10 sm:mt-[44.58px]  " >
       <div class="container">  
         <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-[15px] sm:gap-x-[30.69px] gap-y-[30px] place-content-center   "> 
