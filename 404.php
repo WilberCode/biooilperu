@@ -15,15 +15,7 @@ get_header();?>
             <a class=" text-xl text-secondary-800 block mt-8 hover:underline font-semibold" href="<?php echo esc_url(home_url("/"));?>">Volver a la página principal</a>
         </div> 
    </div>
- </div>     
-
-
- <div  class="mio" >
-    <div class="mio-1"> 1</div>
-    <div class="mio-2"> 2</div>
-    <div class="mio-3"> 3 </div>
-    <div class="mio-4"> 4</div> 
-</div>
+ </div>      
  <?php 
 get_footer();
 ?>
