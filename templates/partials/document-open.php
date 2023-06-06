@@ -19,7 +19,7 @@
             gtag('js', new Date());
 
             gtag('config', 'G-N83HVR51RJ'); 
-          },3000)
+          },2000)
         }
     </script>
   
