@@ -12,7 +12,7 @@ Template Post Type: post, page, event
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Cyber WOW - Bio Oil Perú</title>
+      <title>Landing Farmacias - Bio Oil Perú</title>
       <meta name="description" content="Compra Bio-Oil en tu tienda favorita.">
       
       <!-- Google tag (gtag.js) -->
