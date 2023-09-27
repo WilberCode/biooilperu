@@ -32,7 +32,7 @@
       
           <div  class="hidden sm:block" >
             <h3 class="text-[24px] mt-[25px] mb-[10px]">Más publicaciones</h3>
-            <div  class=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-[15px] sm:gap-x-[30.69px] gap-y-[30px] place-content-center    " >
+            <div  class=" grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-x-[15px] sm:gap-x-[30.69px] gap-y-[30px] place-content-center    " >
             <?php 
                     $args_relacionado = array( 
                     'post_type' =>get_post_type( get_the_ID()),  
